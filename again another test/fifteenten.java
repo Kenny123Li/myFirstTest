@@ -23,9 +23,10 @@ public static void main(String[]args)
             if (driveway.empty()){
                  System.out.println("There are no cars in the driveway.");}
             while (driveway.peek() != (-decision)){
+                if (!driveway.empty()){
                 street.push(driveway.pop());
                 System.out.println("Street: "+street);
-                System.out.println("Driveway: "+driveway);
+                System.out.println("Driveway: "+driveway);}
             }
             driveway.pop();
             while (!street.empty()){
