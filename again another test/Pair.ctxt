@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.params=x_coordinate\ y_coordinate
+comment0.target=Pair(int,\ int)
+comment1.params=row\ column\ gr
+comment1.target=boolean\ isFree(int,\ int,\ Grid)
+comment2.params=
+comment2.target=int\ getrow()
+comment3.params=
+comment3.target=int\ getcolumn()
+comment4.params=
+comment4.target=int\ getvalue()
+numComments=5

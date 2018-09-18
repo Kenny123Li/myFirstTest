@@ -1,18 +1,16 @@
-. . .
+import java.util.*;
 /**
    Class for simulating a runway.
 */
 public class RunwaySimulator
 {
-   . . .
-
+   private Queue<String> land = new LinkedList<>();
+   private Queue<String> takeoff = new LinkedList<>();
    /**
       Constructor.
    */
    public RunwaySimulator()
    {
-      . . .
-
    }
 
    /**
@@ -21,8 +19,7 @@ public class RunwaySimulator
    */
    public void addTakeOff(String flightSymbol)
    {
-      . . .
-
+      takeoff.add(flightSymbol);
    }
 
    /**
@@ -31,8 +28,7 @@ public class RunwaySimulator
    */
    public void addLanding(String flightSymbol)
    {
-      . . .
-
+      land.add(flightSymbol);
    }
 
    /**
@@ -40,8 +36,17 @@ public class RunwaySimulator
    */
    public void handleNextAction()
    {
-      . . .
-
-
+      if (land.size()==0)
+      {
+          if(takeoff.size()==0)
+            System.out.println("No action to simulate");
+          else
+            System.out.println(takeoff.remove() + " has taken off");
+        }
+      else
+      {
+          System.out.println(land.remove() + " has landed");
+        }
+        
    }
 }
